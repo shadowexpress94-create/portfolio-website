@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Yahya Yusuf</title>
+  <meta name="description" content="Projects by Yahya Yusuf with descriptions, images and links.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Yahya Yusuf, home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Yahya Yusuf</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-coral" href="contact.html">Say hello <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="pagehead">
+      <p class="eyebrow"><i style="background:var(--coral)"></i>Projects</p>
+      <h1>Things I have <span class="hl-c">built</span> and am <span class="hl-v">building</span>.</h1>
+      <p class="lead">Four projects I have built, each with a description, an image and links.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="fbtn" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="fbtn" type="button" data-filter="react" aria-pressed="false">React</button>
+      <button class="fbtn" type="button" data-filter="ai" aria-pressed="false">AI</button>
+      <button class="fbtn" type="button" data-filter="python" aria-pressed="false">Python</button>
+    </div>
+
+    <ul class="grid g2 plain-list" aria-label="Project list">
+      <li class="card project" data-cat="react">
+        <article>
+          <figure><img src="images/jornal app img.png" alt="Illustration of the Project Journal dashboard with project cards and a progress bar" width="640" height="400" loading="lazy"><figcaption>Screenshot: project journal home page.</figcaption></figure>
+          <div class="body">
+            <ul class="chips" style="gap:8px"><li class="pill c-sky">React</li><li class="pill c-violet">Vite</li><li class="pill c-sun">Firebase</li><li class="pill c-mint">Tailwind CSS</li></ul>
+            <h3>Project Journal</h3>
+            <p>A journal app built around projects. Create a project, then log entries, milestones and notes against it. Sign-in and Firestore security rules protect each user's data.</p>
+            <ul class="ul"><li>Dashboard, project and entry views</li><li>Firebase sign-in and database rules</li></ul>
+            <div class="links2"><span class="btn btn-ghost" aria-disabled="true">Demo coming soon</span><a class="btn btn-ghost" href="https://github.com/shadowexpress94-create/jornal-web-app-demo" target="_blank" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+      </li>
+      <li class="card project" data-cat="react ai">
+        <article>
+          <figure><img src="images/studyvid.png" alt="Illustration of the StudyAid question box with subject buttons" width="640" height="400" loading="lazy"><figcaption>Screenshot: study aid home page.</figcaption></figure>
+          <div class="body">
+            <ul class="chips" style="gap:8px"><li class="pill c-sky">React</li><li class="pill c-sun">Firebase</li><li class="pill c-pink">AI</li></ul>
+            <h3>StudyAid</h3>
+            <p>An AI study helper. Pick a subject, ask a question or upload study material, and get a step-by-step explanation. Past questions are saved to your library.</p>
+            <ul class="ul"><li>Subject picker and file upload</li><li>Frontend here, backend hosted on Render</li></ul>
+            <div class="links2"><a class="btn btn-ink" href="https://studyaid-frontend-zxid.vercel.app/" target="_blank" rel="noopener">Live demo</a><a class="btn btn-ghost" href="https://github.com/shadowexpress94-create/studyaid-frontend" target="_blank" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+      </li>
+      <li class="card project" data-cat="react ai">
+        <article>
+          <figure><img src="images/image.png" alt="Illustration of the Shadow Prep practice question with answer options" width="640" height="400" loading="lazy"><figcaption>Screenshot: shadow prep home page.</figcaption></figure>
+          <div class="body">
+            <ul class="chips" style="gap:8px"><li class="pill c-sky">React</li><li class="pill c-violet">Vite</li><li class="pill c-pink">Gemini API</li></ul>
+            <h3>Shadow Prep</h3>
+            <p>An exam-prep tutor for students. Add your courses, practise one multiple-choice question at a time, ask for explanations, and follow your progress and cram plan.</p>
+            <ul class="ul"><li>Courses, Practice, Explain, Progress and Plan screens</li><li>A serverless function keeps the AI key private</li></ul>
+            <div class="links2"><a class="btn btn-ink" href="https://shadow-prep.vercel.app/" target="_blank" rel="noopener">Live demo</a><a class="btn btn-ghost" href="https://github.com/shadowexpress94-create/shadow-prep" target="_blank" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+      </li>
+      <li class="card project" data-cat="python">
+        <article>
+          <figure><img src="images/shot-bakery-home.jpg" alt="Screenshot of the Flour and Hearth bakery home page" width="960" height="600" loading="lazy"><figcaption>Screenshot: bakery home page. Checkout, cart, login and order tracking pages are in the source code.</figcaption></figure>
+          <div class="body">
+            <ul class="chips" style="gap:8px"><li class="pill c-mint">Python</li><li class="pill c-coral">Django</li><li class="pill c-sun">Paystack</li></ul>
+            <h3>Bakery Order and Delivery System</h3>
+            <p>An ordering and delivery system for a bakery. Customers order, admins manage the menu and orders, riders share live location, and payments run through Paystack.</p>
+            <ul class="ul"><li>Customer, Admin and Rider roles</li><li>WebSocket live rider tracking</li></ul>
+            <div class="links2"><span class="btn btn-ghost" aria-disabled="true">Demo coming soon</span><a class="btn btn-ghost" href="https://github.com/shadowexpress94-create/delivery-system-website" target="_blank" rel="noopener">Source code</a></div>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+    <section class="band media" aria-labelledby="media-title">
+      <video controls preload="metadata" poster="images/video-poster.jpg" width="960" height="540">
+        <source src="media/walkthrough.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+      <div>
+        <p class="pill c-sun">Multimedia</p>
+        <h2 id="media-title">Project walkthrough</h2>
+        <p>A short animated overview of this site.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="yr">2026</span> Yahya Yusuf. Built with HTML, CSS and JavaScript.</p>
+      <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

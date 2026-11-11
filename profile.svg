@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Portrait placeholder for Yahya Yusuf">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDC673"/><stop offset="1" stop-color="#9E8CFF"/></linearGradient></defs>
+<rect width="600" height="600" fill="url(#g)"/>
+<circle cx="300" cy="230" r="105" fill="#fff" fill-opacity=".92"/>
+<path d="M95 640c0-125 90-215 205-215s205 90 205 215z" fill="#fff" fill-opacity=".92"/>
+</svg>

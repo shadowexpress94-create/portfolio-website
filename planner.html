@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Planner | Yahya Yusuf</title>
+  <meta name="description" content="An interactive task manager: add, complete, filter and delete academic tasks.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Yahya Yusuf, home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Yahya Yusuf</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html" aria-current="page">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-coral" href="contact.html">Say hello <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="pagehead">
+      <p class="eyebrow"><i style="background:var(--mint)"></i>Academic planner</p>
+      <h1>Plan the week. <span class="hl-m">Finish</span> the work.</h1>
+      <p class="today" id="plannerDate"></p>
+    </header>
+
+    <div class="planner">
+      <section class="card" aria-labelledby="tasks-title">
+        <h2 id="tasks-title" class="sr-only">Tasks</h2>
+        <form class="addform" id="taskForm" novalidate>
+          <div class="field" id="f-title">
+            <label for="tTitle">New task</label>
+            <input id="tTitle" name="title" type="text" placeholder="e.g. Finish the contact form validation" maxlength="80" autocomplete="off" aria-describedby="e-title">
+            <div class="err" id="e-title" role="alert"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="tSubject">Subject</label>
+              <select id="tSubject"><option>Web development</option><option>Python</option><option>C++</option><option>Physics</option><option>Electronics</option><option>Other</option></select></div>
+            <div class="field"><label for="tDue">Due date</label><input id="tDue" type="date"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="tPrio">Priority</label>
+              <select id="tPrio"><option value="2">High</option><option value="1" selected>Medium</option><option value="0">Low</option></select></div>
+            <div class="field" style="align-content:end"><button class="btn btn-coral" type="submit">Add task</button></div>
+          </div>
+        </form>
+
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="fbtn" type="button" data-tf="all" aria-pressed="true">All</button>
+          <button class="fbtn" type="button" data-tf="active" aria-pressed="false">Active</button>
+          <button class="fbtn" type="button" data-tf="done" aria-pressed="false">Done</button>
+        </div>
+        <ul class="tasks" id="taskList" aria-live="polite"></ul>
+        <button class="linkbtn" type="button" id="clearDone">Clear completed tasks</button>
+        <p class="note">The first four tasks are examples. Delete them or add your own. Changes save in this browser.</p>
+      </section>
+
+      <aside class="card t-violet tint progress" aria-labelledby="prog-title">
+        <p class="eyebrow" id="prog-title" style="margin-bottom:12px">Progress</p>
+        <svg class="ring" viewBox="0 0 120 120" role="img" aria-label="Completion ring">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--card)" stroke-width="14"/>
+          <circle id="ringArc" cx="60" cy="60" r="50" fill="none" stroke="var(--violet)" stroke-width="14" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .6s"/>
+        </svg>
+        <div class="big" id="pPct">0%</div>
+        <p id="pText" style="text-align:center;color:var(--ink-2);font-weight:600;margin-top:4px">No tasks yet</p>
+        <div class="minis">
+          <div class="mini"><b id="nAll">0</b><span>Total</span></div>
+          <div class="mini"><b id="nDone">0</b><span>Done</span></div>
+          <div class="mini"><b id="nLate" style="color:var(--danger)">0</b><span>Overdue</span></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="yr">2026</span> Yahya Yusuf. Built with HTML, CSS and JavaScript.</p>
+      <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

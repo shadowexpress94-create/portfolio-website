@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Yahya Yusuf</title>
+  <meta name="description" content="Contact form for Yahya Yusuf with validation.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Yahya Yusuf, home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Yahya Yusuf</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-coral" href="contact.html">Say hello <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="pagehead">
+      <p class="eyebrow"><i style="background:var(--sun)"></i>Contact</p>
+      <h1>Let us <span class="hl-c">talk</span>. Send me a <span class="hl-v">message</span>.</h1>
+      <p class="lead">Questions about a project, a collaboration or the site itself. Fill in every field and I will get back to you.</p>
+    </header>
+
+    <div class="contact">
+      <form class="card" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field" id="c-name"><label for="cName">Full name</label><input id="cName" name="name" type="text" autocomplete="name" placeholder="Your name"><div class="err" role="alert"></div></div>
+          <div class="field" id="c-email"><label for="cEmail">Email address</label><input id="cEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com"><div class="err" role="alert"></div></div>
+        </div>
+        <div class="field" id="c-phone"><label for="cPhone">Phone number</label><input id="cPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="08012345678"><div class="err" role="alert"></div></div>
+        <div class="field" id="c-msg"><label for="cMsg">Message</label><textarea id="cMsg" name="message" placeholder="Tell me what you have in mind (at least 20 characters)" maxlength="600"></textarea><div class="counter" id="cCount">0 / 600</div><div class="err" role="alert"></div></div>
+        <button class="btn btn-ink" type="submit" style="margin-top:8px">Send message <svg class="ic" style="stroke:#fff" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <div class="success" id="okBox" role="status"><b>Message ready.</b><span>This is a front-end demo, so nothing was sent. When the back end exists, this form will post to it.</span></div>
+      </form>
+
+      <aside class="side" aria-label="Other ways to reach me">
+        <section class="card t-sky tint"><div class="sec-title" style="margin-bottom:10px"><span class="bubble" style="background:var(--card)"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><h2>Email</h2></div>
+          <div class="copyrow"><span>y.yusuf6179@miva.edu.ng</span><button type="button" id="copyMail">Copy</button></div></section>
+        <section class="card t-sun tint"><div class="sec-title" style="margin-bottom:10px"><span class="bubble" style="background:var(--card)"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><h2>Based in</h2></div><p>Kano, Nigeria. Time zone UTC+1.</p></section>
+        <section class="card t-pink tint"><div class="sec-title" style="margin-bottom:10px"><span class="bubble" style="background:var(--card)"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><h2>Reply time</h2></div><p>Usually within two days.</p></section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="yr">2026</span> Yahya Yusuf. Built with HTML, CSS and JavaScript.</p>
+      <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

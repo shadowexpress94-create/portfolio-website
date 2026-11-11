@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yahya Yusuf | Student Portfolio</title>
+  <meta name="description" content="Portfolio and academic planner of Yahya Yusuf, a Software Engineering student at MIVA Open University.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Yahya Yusuf, home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Yahya Yusuf</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      <nav aria-label="Main">
+      <ul class="menu" id="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-coral" href="contact.html">Say hello <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="welcome"><b aria-hidden="true"></b><span id="todayLine">Welcome to my portfolio</span></p>
+        <h1 id="hero-title">Hi, I am <span class="hl-v">Yahya Yusuf</span>. I build <span class="hl-c">useful</span> things for the <span class="hl-m">web</span>.</h1>
+        <p class="bio">Welcome! I am a Software Engineering student learning HTML, CSS and JavaScript by building real projects. This site is my portfolio and my academic planner in one place.</p>
+        <div class="actions">
+          <a class="btn btn-ink" href="projects.html">See my projects <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="planner.html">Open the planner</a>
+        </div>
+      </div>
+      <div class="art">
+        <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+        <span class="blob b3" aria-hidden="true"></span><span class="blob b4" aria-hidden="true"></span>
+        <figure class="photo"><img src="images/profile 1.png" alt="Portrait of Yahya Yusuf" width="600" height="600"></figure>
+        <span class="chip k1" aria-hidden="true"><i style="background:var(--violet)"></i>HTML + CSS</span>
+        <span class="chip k2" aria-hidden="true"><i style="background:var(--sun)"></i>JavaScript next</span>
+        <span class="chip k3" aria-hidden="true"><i style="background:var(--mint)"></i>Python</span>
+      </div>
+    </section>
+
+    <section aria-label="At a glance">
+      <ul class="grid g4 plain-list">
+        <li class="stat t-violet"><b data-count="4">0</b><span>Sample projects</span></li>
+        <li class="stat t-coral"><b data-count="5">0</b><span>Languages and tools</span></li>
+        <li class="stat t-sun"><b data-count="2">0</b><span>Universities</span></li>
+        <li class="stat t-mint"><b id="statTasks" data-count="4">0</b><span>Tasks in my planner</span></li>
+      </ul>
+    </section>
+
+    <section class="band" aria-labelledby="bio-title">
+      <div class="card bio-card">
+        <div>
+          <p class="eyebrow"><i></i>Brief biography</p>
+          <h2 id="bio-title" style="font-size:clamp(26px,4vw,38px);font-weight:800;margin-top:14px">A student builder from Kano.</h2>
+        </div>
+        <div>
+          <p>I study Software Engineering at MIVA Open University and Physics and Electronics at Bayero University Kano. I started with Python, then moved to the web, and I am now learning JavaScript and C++.</p>
+          <p>Outside class I trade, play chess and work on Shadow Corporation with my co-founders. I want to build tools where software and finance meet.</p>
+          <p style="margin-top:16px"><a class="hl-v" href="about.html" style="font-weight:700">Read the full story &rarr;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="explore-title">
+      <div class="sec-title"><h2 id="explore-title">Explore the site</h2></div>
+      <ul class="grid g3 plain-list">
+        <li><a class="explore t-violet" href="about.html"><span><h3>About me</h3><p>Education, skills, career goals and what I do for fun.</p></span><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="explore t-coral" href="projects.html"><span><h3>Projects</h3><p>Three builds with descriptions, screenshots and links.</p></span><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a class="explore t-mint" href="planner.html"><span><h3>Academic planner</h3><p>An interactive task manager with filters and progress.</p></span><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+      </ul>
+    </section>
+
+    <section class="band" aria-labelledby="learn-title">
+      <div class="sec-title"><h2 id="learn-title">Currently learning</h2></div>
+      <ul class="chips">
+        <li class="pill c-violet"><i class="dotc" style="background:var(--violet)"></i>JavaScript</li>
+        <li class="pill c-coral"><i class="dotc" style="background:var(--coral)"></i>C++</li>
+        <li class="pill c-sky"><i class="dotc" style="background:var(--sky)"></i>Node.js (later)</li>
+        <li class="pill c-sun"><i class="dotc" style="background:var(--sun)"></i>Figma</li>
+        <li class="pill c-mint"><i class="dotc" style="background:var(--mint)"></i>Responsive design</li>
+        <li class="pill c-pink"><i class="dotc" style="background:var(--pink)"></i>Git</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="yr">2026</span> Yahya Yusuf. Built with HTML, CSS and JavaScript.</p>
+      <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
